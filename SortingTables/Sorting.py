@@ -7,7 +7,7 @@ import time
 
 
 
-randomArr = createRandomlySorted()
+
 
 
 def insertionSortWithSorted():
@@ -15,8 +15,9 @@ def insertionSortWithSorted():
     insertionSort(createSorted())
     print("Czas liczenia insert sort z tablica posortowana: ", time.time()-start)
 def insertionSortWithRandomlySorted():
+    arr = createRandomlySorted()
     start = time.time()
-    insertionSort(randomArr)
+    insertionSort(arr)
     print("Czas liczenia insert sort z tablica w losowym ukladzie: ", time.time() - start)
 def insertionSortWithBackwards():
     start = time.time()
@@ -29,8 +30,9 @@ def bubbleSortWithSorted():
     bubbleSort(createSorted())
     print("Czas liczenia bubble sort z tablica posortowana: ", time.time() - start)
 def bubbleSortWithRandomlySorted():
+    arr = createRandomlySorted()
     start = time.time()
-    bubbleSort(randomArr)
+    bubbleSort(arr)
     print("Czas liczenia bubble sort z tablica w losowym ukladzie: ", time.time() - start)
 def bubbleSortWithBackwards():
     start = time.time()
@@ -43,8 +45,9 @@ def heapSortWithSorted():
     heapSort(createSorted())
     print("Czas liczenia heap sort z tablica posortowana: ", time.time() - start)
 def heapSortWithRandomlySorted():
+    arr = createRandomlySorted()
     start = time.time()
-    heapSort(randomArr)
+    heapSort(arr)
     print("Czas liczenia heap sort z tablica w losowym ukladzie: ", time.time() - start)
 def heapSortWithBackwards():
     start = time.time()
@@ -58,9 +61,10 @@ def quickSortWithSorted():
     quickSort(createSorted(), 0, n-1)
     print("Czas liczenia quick sort z tablica posortowana: ", time.time() - start)
 def quickSortWithRandomlySorted():
+    arr = createRandomlySorted()
     start = time.time()
-    n = len(randomArr)
-    quickSort(randomArr, 0, n-1)
+    n = len(arr)
+    quickSort(arr, 0, n-1)
     print("Czas liczenia quick sort z tablica w losowym ukladzie: ", time.time() - start)
 def quickSortWithBackwards():
     start = time.time()
